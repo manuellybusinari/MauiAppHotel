@@ -39,7 +39,6 @@
                     <!-- Adultos-->                   
                     <Label Grid.Row="0" Grid.Column="0"
                            Text="Adultos:"
-
                            TextColor="{StaticResource Black}"/>
 
                     <Label Grid.Row="0" Grid.Column="1"
@@ -57,8 +56,7 @@
                                         
                     <!-- Crianças -->                                                 
                     <Label Grid.Row="1" Grid.Column="0"
-                           Text="Crianças:" 
-                           
+                           Text="Crianças:"                            
                            TextColor="{StaticResource Black}"/>
 
                     <Label Grid.Row="1" Grid.Column="1"
@@ -97,7 +95,7 @@
                      <!-- Checkin -->
                         <HorizontalStackLayout>
                             <Label Text="Chekin:" 
-                                   Padding="10"/>
+                                   Padding="16"/>
                             <DatePicker x:Name="dtpck_checkin"
                                         Format="dd/MM/yyyy"/>
 
@@ -115,7 +113,17 @@
 
                 </Frame>
 
-                <Button Text=" Avançar"/>
+                <Button Text="Avançar" Clicked="Button_Clicked"
+                        Background="{StaticResource DarkOliveGreen}"
+                        Padding="10"/>
+                
+            
+                
+                
+              
+
+
+
 
 
 
