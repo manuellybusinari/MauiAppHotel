@@ -22,4 +22,22 @@ public partial class ContratacaoHospedagem : ContentPage
 
         }
     }
+
+    private void Sobre_Clicked_1(object sender, EventArgs e)
+    {
+        try
+        {
+
+            Navigation.PushAsync(new NewPage1());
+
+        }
+        catch (Exception ex)
+        {
+
+            DisplayAlert("Ops", ex.Message, "Ok");
+
+        }
+
+
+    }
 }

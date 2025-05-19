@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppHotel.Views.NewPage1"
+             Title="Sobre"
+             NavigationPage.HasNavigationBar="False"
+             Background="{StaticResource Gray100}">
+
+    <ScrollView>
+        <VerticalStackLayout
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            Padding="10"
+            Spacing="1">
+
+            <Label 
+                Text="SOBRE O APLICATIVO"
+                TextColor="{StaticResource DarkOliveGreen}"
+                FontSize="35"
+                FontAttributes="Bold"
+                FontFamily="OswalMedium"
+                HorizontalOptions="Center" />
+
+            <Frame Padding="10" 
+                   Margin="10"                    
+                   BorderColor="{StaticResource DarkOliveGreen}"
+                   HorizontalOptions="Center"
+                   WidthRequest="300">
+                
+                <VerticalStackLayout>
+                    <Label 
+                        FontSize="15"                        
+                        TextColor="Black"
+                        Text="Este aplicativo foi desenvolvido como parte da disciplina de Desenvolvimento de Sistemas – Módulo II, 
+                        no curso de Análise e Desenvolvimento de Sistemas.&#10;&#10;O projeto tem como objetivo simular o cálculo de hospedagem em um hotel, 
+                        considerando o número de adultos e crianças, além das datas de check-in e check-out." />
+                
+                </VerticalStackLayout>
+            </Frame>
+
+            <Frame Padding="10" 
+                   Margin="5" 
+                   BorderColor="{StaticResource DarkOliveGreen}"
+                    HorizontalOptions="Center"
+                    WidthRequest="300">
+                
+                <VerticalStackLayout>
+                    <Label 
+                        FontSize="15"
+                        TextColor="Black"
+                        Text="Dev: Manuelly Businari Vilas Boas &#10;Data de desenvolvimento: 18/05/2025" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <Button Text="Voltar" Clicked="Button_Clicked"
+                    HorizontalOptions="Center"
+                    Background="{StaticResource DarkOliveGreen}"
+                    Padding="10"
+                    Margin="5"/>
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
