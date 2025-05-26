@@ -72,7 +72,8 @@
                 <Picker
                     x:Name="pck_quarto"
                     FontSize="13"
-                    Title="Selecione sua acomodação" />
+                    Title="Selecione sua acomodação"
+                    ItemDisplayBinding="{Binding Descricao}"/>
                             
                     <!-- Período estadia -->
                 <Frame Padding="10"      
@@ -85,18 +86,19 @@
                                />
                         <!-- Checkin -->
                         <HorizontalStackLayout>
-                            <Label Text="Chekin:" 
+                            <Label Text="Check-in:" 
                                    Padding="16"/>
                             <DatePicker x:Name="dtpck_checkin"
+                                        DateSelected="dtpck_checkin_DateSelected"
                                         Format="dd/MM/yyyy"/>
 
                         </HorizontalStackLayout>
 
                         <!-- Check-out -->
                         <HorizontalStackLayout>
-                            <Label Text="Chek-out:"
-                                   Padding="10"/>
-                            <DatePicker x:Name="dtpck_checkout"                                        
+                            <Label Text="Check-out:"
+                                   Padding="10"/> 
+                            <DatePicker x:Name="dtpck_checkout"                                       
                                         Format="dd/MM/yyyy"/>
 
                         </HorizontalStackLayout>
@@ -109,7 +111,13 @@
                         Padding="10"
                         Margin="5"/>
 
-                <Button Text="Sobre" Clicked="Sobre_Clicked_1"
+                <Button Text="Detalhes das acomodações" Clicked="Acomodacao_Clicked"
+                         Background="{StaticResource DarkOliveGreen}"
+                        Padding="10"
+                        Margin="5"/>
+
+
+                <Button Text="Sobre o App" Clicked="Sobre_Clicked_1"
                         Background="{StaticResource DarkOliveGreen}"
                         Padding="10"
                         Margin="5 "/>

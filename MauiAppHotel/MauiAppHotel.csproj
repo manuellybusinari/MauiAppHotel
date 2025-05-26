@@ -57,10 +57,12 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Remove="Views\Acomodacao.xaml.cs" />
 	  <Compile Remove="Views\Sobre.xaml.cs" />
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Remove="Views\Acomodacao.xaml" />
 	  <MauiXaml Remove="Views\Sobre.xaml" />
 	</ItemGroup>
 
@@ -78,6 +80,9 @@
 
 	<ItemGroup>
 	  <MauiXaml Update="Views\ContratacaoHospedagem.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\DetalhesAcomodacao.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\HospedagemContratada.xaml">

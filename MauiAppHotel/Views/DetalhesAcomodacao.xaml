@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppHotel.Views.DetalhesAcomodacao"
+             Title="Detalhes das Acomodações"
+             NavigationPage.HasNavigationBar="False"
+             
+             Background="{StaticResource Gray100}">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="10" 
+                             Spacing="10">
+
+            <!-- Suíte Royal -->
+            <Frame BackgroundColor="White" 
+                   BorderColor="Black" 
+                   CornerRadius="15" 
+                   Padding="15">
+                
+                <VerticalStackLayout>
+                    <Label Text="Suíte Royal"
+                           FontFamily="OswaldBold"
+                           FontSize="26"
+                           TextColor="DarkOliveGreen"
+                           HorizontalOptions="Center"/>
+
+                    <Label Text="• Café da manhã incluso &#10;• Wi-Fi de alta velocidade &#10;• Estacionamento privativo &#10;• Piscina e spa &#10;• Serviço de quarto 24h &#10;• Academia &#10;• Vista panorâmica &#10; •Área de trabalho privativa &#10;• Cinema privativo &#10;"
+                           FontFamily="OswaldRegular"
+                           FontSize="18"
+                           TextColor="Black"/>
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Suíte Premium -->
+            <Frame BackgroundColor="White" 
+                   BorderColor="Black" 
+                   CornerRadius="15" 
+                   Padding="15">
+                
+                <VerticalStackLayout>
+                    <Label Text="Suíte Premium"
+                           FontFamily="OswaldBold"
+                           FontSize="26"
+                           TextColor="DarkOliveGreen"
+                           HorizontalOptions="Center"/>
+
+                    <Label Text="• Café da manhã incluso &#10;• Wi-Fi&#10;• Estacionamento privativo&#10;• Piscina &#10;• Serviço de quarto até às 22h &#10;• Academia"
+                           FontFamily="OswaldRegular"
+                           FontSize="18"
+                           TextColor="Black"/>
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Suíte Smart -->
+            <Frame BackgroundColor="White" 
+                   BorderColor="Black" 
+                   CornerRadius="15" 
+                   Padding="15">
+                
+                <VerticalStackLayout>
+                    <Label Text="Suíte Smart"
+                           FontFamily="OswaldBold"
+                           FontSize="26"
+                           TextColor="DarkOliveGreen"
+                           HorizontalOptions="Center"/>
+
+                    <Label Text="• Café da manhã incluso &#10;• Wi-Fi &#10;• Estacionamento &#10;• Acesso à piscina"
+                           FontFamily="OswaldRegular"
+                           FontSize="18"
+                           TextColor="Black"/>
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Suíte Basic -->
+            <Frame BackgroundColor="White" 
+                   BorderColor="Black" 
+                   CornerRadius="15" 
+                   Padding="15">
+                
+                <VerticalStackLayout>
+                    <Label Text="Suíte Basic"
+                           FontFamily="OswaldBold"
+                           FontSize="26"
+                           TextColor="DarkOliveGreen"
+                           HorizontalOptions="Center"/>
+
+                    <Label Text="• Wi-Fi &#10;• Estacionamento &#10;• Acesso à área comum"
+                           FontFamily="OswaldRegular"
+                           FontSize="18"
+                           TextColor="Black"/>
+                </VerticalStackLayout>
+            </Frame>
+
+            <Button Text="Voltar" Clicked="Button_Clicked"
+        HorizontalOptions="Center"
+        Background="{StaticResource DarkOliveGreen}"
+        Padding="10"
+        Margin="5"/>
+
+        </VerticalStackLayout>
+
+      
+    </ScrollView>
+
+</ContentPage>
