@@ -1,3 +1,5 @@
+using MauiAppHotel.Models;
+
 namespace MauiAppHotel.Views;
 
 public partial class ContratacaoHospedagem : ContentPage
@@ -33,20 +35,34 @@ public partial class ContratacaoHospedagem : ContentPage
         throw new NotImplementedException();
     }
 
-    private void Button_Clicked(object sender, EventArgs e)
+    private async void Button_Clicked(object sender, EventArgs e) // Aciona o método assíncrono.
     {
         try
         {
+            Hospedagem h = new Hospedagem // Armazena os dados da reserva.
+            { 
+                QuartoSelecionado = (Quarto)pck_quarto.SelectedItem,
+                QtdAdultos = Convert.ToInt32(stp_adultos.Value),
+                QtdCriancas = Convert.ToInt32(stp_criancas),
+                DataCheckin = dtpck_checkin.Date,
+                DataCheckout = dtpck_checkout.Date
+            };
 
-            Navigation.PushAsync(new HospedagemContratada());
+            await Navigation.PushAsync(new HospedagemContratada()
+            { 
+                BindingContext = h
+            });
+            // 'await'-> permite que a navegação aconteça sem travar a interface;
+            // 'Navigation.PushAsync(new HospedagemContratada()'-> Abre a página 'HospedagemContratada';
+            // '{BindingContext = h} -> Envia dos dados da hospedagem para essa nova tela para que possam ser exibidos.
 
         }
         catch (Exception ex)
         {
 
-            DisplayAlert("Ops", ex.Message, "Ok");
+            await DisplayAlert("Ops", ex.Message, "Ok");
 
-        }
+        } // Tratamento de erro: Exibe alerta se algo der errado.
     }
 
     private void Sobre_Clicked_1(object sender, EventArgs e)
